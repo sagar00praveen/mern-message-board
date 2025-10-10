@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = 'http://localhost:5000/api/messages';
+const API_URL = 'https://mern-message-board-nzbs.onrender.com/api/messages';
+
 
 function App() {
   const [messages, setMessages] = useState([]);
