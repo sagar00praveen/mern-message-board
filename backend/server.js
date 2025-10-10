@@ -7,8 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // Enable Cross-Origin Resource Sharing
-app.use(express.json()); // Enable parsing of JSON body
+const corsOptions = {
+  origin: 'https://mern-message-board.vercel.app/', 
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
+app.use(express.json()); 
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
