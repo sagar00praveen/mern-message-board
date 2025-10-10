@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 const corsOptions = {
-  origin: 'https://mern-message-board.vercel.app/', 
+  origin: 'https://mern-message-board.vercel.app', 
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
